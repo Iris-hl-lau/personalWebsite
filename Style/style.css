@@ -1,0 +1,30 @@
+body, pre {
+    background-color: #c1d9ff;
+    padding: 2%;
+    border: none;
+}
+
+#Iris_pic {
+    width: 12%;
+}
+
+.btn_style {
+    width: 20pt;
+}
+
+.console{
+    color: turquoise;
+}
+
+.var {
+    color: blue;
+}
+
+textarea {
+    resize: none;
+}
+
+.choiceList {
+    list-style-type: none;
+    padding: 0%;
+}
