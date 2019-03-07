@@ -12,28 +12,28 @@ http.createServer((request, response) => {
         fs.readFile('./index.html' + path, function(error, data) {  
             if (error) {  
                 response.writeHead(404);  
-                //response.write();  
-                response.end(error);  
+                response.write(error);  
+                response.end();  
             } else {  
                 response.writeHead(200, {  
                     'Content-Type': 'text/html'  
                 });  
-                //response.write();  
-                response.end(data);  
+                response.write(data);  
+                response.end();  
             }  
         });  
     } else {
         fs.readFile(__dirname + path, function(error, data) {  
             if (error) {  
                 response.writeHead(404);  
-                //response.write();  
-                response.end(error);  
+                response.write(error);  
+                response.end();  
             } else {  
                 response.writeHead(200, {  
                     'Content-Type': 'text/html'  
                 });  
-                //response.write();  
-                response.end(data);  
+                response.write(data);  
+                response.end();  
             }  
         });  
     }
