@@ -39,4 +39,5 @@ for (let i = 0; i < quiz.length; i++) {
 response.end();
 }).listen(port,() => {
 console.log('listening...');
+open('http://localhost:' + port);
 });
