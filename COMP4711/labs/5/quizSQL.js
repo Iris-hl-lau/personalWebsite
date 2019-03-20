@@ -3,7 +3,7 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: ""
+    password: "pretty15gitl"
 });
 
 con.connect(function(err) {
@@ -17,7 +17,7 @@ con.connect(function(err) {
     con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
+    password: "pretty15gitl",
     database: "mydb"
     });
 
