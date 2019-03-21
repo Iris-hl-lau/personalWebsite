@@ -1,6 +1,12 @@
 const data = JSON.parse(localStorage.getItem("quiz"));
 const answers = JSON.parse(localStorage.getItem("answers"));
 
+let div = document.createElement("DIV");
+div.id = "quizScore";
+div.innerHTML = "Score: ";
+document.body.appendChild(div);
+linebreak(document.body);
+
 let list = document.createElement("OL");
 list.id = "ol";
 document.body.appendChild(list);
@@ -46,16 +52,21 @@ function generateChoice(name, choice, loc) {
 
 function checkAnswers() {
     let radiobtns = document.querySelectorAll(".radiobtn");
-    
+    let score = document.querySelectorAll(".question").length;
     for(let i = 0; i < radiobtns.length; i++) {
         if(answers.includes(i)) {
             radiobtns[i].parentElement.style.background = "#41f4a9";
         }else if(radiobtns[i].checked) {
             radiobtns[i].parentElement.style.background = "#f44242";
+            score--;
         } else {
             radiobtns[i].parentElement.style.background = "none";
         }
     }
+
+    let scorekeep = document.getElementById("quizScore");
+    scorekeep.innerHTML = "Score: " + score;
+    scorekeep.style.textAlign = "right";
 }
 
 function btnSubmit(loc) {
